@@ -43,7 +43,7 @@ export class StocksComponent {
         this.stocksServicio.eliminar(ID_venta).subscribe((datos) => {
           this.cargaTabla();
           Swal.fire({
-            title: 'Stocks',
+            title: 'Venta',
             text: 'Se eliminó con éxito el registro',
             icon: 'success',
           });

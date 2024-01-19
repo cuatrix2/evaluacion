@@ -29,11 +29,11 @@ export const routes: Routes = [
     component: StocksComponent,
   },
   {
-    path: 'nuevo-stock',
+    path: 'nueva-venta',
     component: NuevoStocksComponent,
   },
   {
-    path: 'editar-stock/:id',
+    path: 'editar-venta/:id',
     component: NuevoStocksComponent,
   },
   
