@@ -11,7 +11,7 @@ import { StocksService } from '../../Services/stocks.service';
   styleUrl: './stocks.component.css',
 })
 export class StocksComponent {
-  title = 'Stocks';
+  title = 'Venta';
   stocks: IStock[];
 
   constructor(private stocksServicio: StocksService) {}
@@ -26,12 +26,12 @@ export class StocksComponent {
     });
   }
   alerta() {
-    Swal.fire('Stocks', 'Mensaje en Stocks', 'success');
+    Swal.fire('Venta', 'Mensaje en Venta', 'success');
   }
 
   eliminar(ID_venta: number) {
     Swal.fire({
-      title: 'Stocks',
+      title: 'Venta',
       text: 'Esta seguro que desea eliminar el registro',
       icon: 'warning',
       showCancelButton: true,
@@ -50,7 +50,7 @@ export class StocksComponent {
         });
       } else {
         Swal.fire({
-          title: 'Stocks',
+          title: 'Venta',
           text: 'El usuario canceló la acción',
           icon: 'info',
         });

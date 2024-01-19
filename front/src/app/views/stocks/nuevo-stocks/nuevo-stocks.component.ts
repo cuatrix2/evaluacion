@@ -17,7 +17,7 @@ import { ProductoService } from '../../../Services/productos.service';
   styleUrl: './nuevo-stocks.component.css'
 })
 export class NuevoStocksComponent {
-  title = 'Nuevo Stock';
+  title = 'Nuevo Venta';
   id!:number;
   ListaProducto:IProducto[];
 
@@ -37,9 +37,9 @@ export class NuevoStocksComponent {
 
     console.log(this.id);
     if(this.id==0 || this.id==undefined){
-      this.title = 'Nuevo Stock';
+      this.title = 'Nueva Venta';
     } else{
-      this.title = 'Actualizar Stock';
+      this.title = 'Actualizar Venta';
       this.stockServicio.uno(this.id).subscribe((res)=>{
         console.log(res);
         this.stock.patchValue({
@@ -67,7 +67,7 @@ export class NuevoStocksComponent {
 
   grabar() {
     Swal.fire({
-      title: 'Productos',
+      title: 'Venta',
       text: 'Esta seguro que desea guardar el registro',
       icon: 'warning',
       showCancelButton: true,
@@ -81,7 +81,7 @@ export class NuevoStocksComponent {
             .insertar(this.stock.value, )
             .subscribe((res) => {
               Swal.fire({
-                title: 'Productos',
+                title: 'Venta',
                 text: 'Se insertó con éxito el registro',
                 icon: 'success',
               });
@@ -93,7 +93,7 @@ export class NuevoStocksComponent {
             .actualizar(this.stock.value,this.id)
             .subscribe((res) => {
               Swal.fire({
-                title: 'Productos',
+                title: 'Venta',
                 text: 'Se actualizó con éxito el registro',
                 icon: 'success',
               });
@@ -103,7 +103,7 @@ export class NuevoStocksComponent {
         }
       } else {
         Swal.fire({
-          title: 'Productos',
+          title: 'Venta',
           text: 'El usuario canceló la acción',
           icon: 'info',
         });
